@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "clean:dist": "rimraf dist",
-    "build:html": "html-minifier --file-ext html --input-dir src/ --output-dir dist",
     "build:css": "node-sass --output-style compressed src/css/ -o dist/css/",
-    "build": "run-s clean:dist build:html build:css"
+    "build:html": "html-minifier --file-ext html --input-dir src/ --output-dir dist",
+    "build": "run-s clean:dist build:html build:css",
+    "watch:css": "yarn build:css -- -w",
+    "watch:html": "onchange 'src/index.html' -v -- yarn build:html",
+    "dev": "run-p watch:css watch:html"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
     "html-minifier": "^3.5.3",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
     "rimraf": "^2.6.1",
     "webpack": "^3.5.4"
   }
