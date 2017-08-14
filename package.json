@@ -4,7 +4,10 @@
   "description": "Homepage for Cheerful Coders AB",
   "main": "index.js",
   "scripts": {
-    "build:css": "node-sass --output-style compressed src/css/ -o dist/css/"
+    "clean:dist": "rimraf dist",
+    "build:html": "html-minifier --file-ext html --input-dir src/ --output-dir dist",
+    "build:css": "node-sass --output-style compressed src/css/ -o dist/css/",
+    "build": "run-s clean:dist build:html build:css"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,10 @@
   },
   "homepage": "https://github.com/gish/cheerfulcoders.se#readme",
   "devDependencies": {
+    "html-minifier": "^3.5.3",
     "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1",
     "webpack": "^3.5.4"
   }
 }
