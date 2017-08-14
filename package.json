@@ -10,7 +10,9 @@
     "build": "run-s clean:dist build:html build:css",
     "watch:css": "yarn build:css -- -w",
     "watch:html": "onchange 'src/index.html' -v -- yarn build:html",
-    "dev": "run-p watch:css watch:html"
+    "dev": "run-p watch:css watch:html",
+    "deploy:publish": "./publish.sh",
+    "deploy": "run-s build deploy:publish"
   },
   "repository": {
     "type": "git",
