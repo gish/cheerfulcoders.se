@@ -4,7 +4,7 @@
   "description": "Homepage for Cheerful Coders AB",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:css": "node-sass --output-style compressed src/css/ -o dist/css/"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gish/cheerfulcoders.se#readme",
   "devDependencies": {
+    "node-sass": "^4.5.3",
     "webpack": "^3.5.4"
   }
 }
