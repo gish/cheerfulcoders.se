@@ -1,0 +1,22 @@
+{
+  "name": "cheerfulcoders.se",
+  "version": "1.0.0",
+  "description": "Homepage for Cheerful Coders AB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gish/cheerfulcoders.se.git"
+  },
+  "author": "Erik Hedberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gish/cheerfulcoders.se/issues"
+  },
+  "homepage": "https://github.com/gish/cheerfulcoders.se#readme",
+  "devDependencies": {
+    "webpack": "^3.5.4"
+  }
+}
