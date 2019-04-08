@@ -1,35 +1,44 @@
-$text-color: rgba(0, 0, 0, 0.8);
+html {
+  box-sizing: border-box;
+}
+
 body {
-  color: $text-color;
-  font-family: "Helvetica Neue",Helvetica,arial,sans-serif;;
-  font-weight: 300;
+  color: #2f4f4f;
+  background: #f2f5ff;
   line-height: 1.25;
-  display: flex;
-  justify-content: center;
 }
 
-a {
-  color: $text-color;
-  &, &:hover {
-    text-decoration: none;
-  }
+.page {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 480px;
 }
 
-.wrapper {
-  max-width: 320px;
+.page__title {
+  font-family: 'Merriweather', serif;
 }
 
-.contact {
-  display: flex;
-
-  &__profile-picture {
-    border-radius: 50%;
-    width: 30%;
-    height: 30%;
-  }
-
-  &__details {
-    width: 70%;
-  }
+.page__text {
+  font-family: 'Open sans', sans-serif;
 }
 
+.section-title {
+  font-family: 'Merriweather', serif;
+  margin: 1.25em 0 0;
+}
+
+.explanation-list {
+  margin: 0;
+}
+
+.explanation-list__title {
+  font-family: 'Open sans', sans-serif;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+  font-size: 1.2em;
+}
+
+.explanation-list__text {
+  font-family: 'Open sans', sans-serif;
+  margin: 0;
+}
