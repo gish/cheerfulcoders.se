@@ -4,9 +4,9 @@
   "description": "Homepage for Cheerful Coders AB",
   "main": "index.js",
   "scripts": {
-    "clean:dist": "rimraf dist",
-    "build:css": "node-sass --output-style compressed src/css/ -o ./css/",
-    "build:html": "html-minifier --file-ext html --input-dir src/ --output-dir .",
+    "clean:dist": "rimraf docs",
+    "build:css": "node-sass --output-style compressed src/css/ -o ./docs/css",
+    "build:html": "html-minifier --file-ext html --input-dir src/ --output-dir ./docs",
     "build": "run-s clean:dist build:html build:css",
     "watch:css": "yarn build:css -- -w",
     "watch:html": "onchange 'src/index.html' -v -- yarn build:html",
